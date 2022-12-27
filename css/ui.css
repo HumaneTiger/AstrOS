@@ -317,8 +317,8 @@ table td.nowrap {
 
 a.button--disabled,
 .display--bright a.button--disabled {
-        cursor: not-allowed;
-    background: linear-gradient(rgb(181, 187, 194), rgba(181, 187, 194, 0.6));
+    cursor: not-allowed;
+    background: linear-gradient(rgb(181, 187, 194), rgba(142, 148, 179, 0.6));
 }
 a.button--disabled:hover,
 .display--bright a.button--disabled:hover {
@@ -339,3 +339,50 @@ a.button--disabled:active,
     text-decoration: underline;
 }
 
+a.link--disabled {
+    cursor: not-allowed;
+    color: rgb(142, 148, 179);
+}
+
+a.link--disabled:hover {
+    text-decoration: none;
+}
+
+.button.icon--locked {
+    position: relative;
+    padding-left: 14px;
+}
+.button.icon--locked:before {
+    background-color: rgb(142, 148, 179);
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
+    content: '⚿';
+    font-size: 17px;
+    display: inline-block;
+    border-radius: 50%;
+    padding: 6px;
+    line-height: 0.95em;
+    position: absolute;
+    left: -18px;
+    top: -1px;
+    transform: rotate(90deg);
+}
+
+.link__primary.icon--locked {
+    position: relative;
+    padding-left: 14px;
+}
+.link__primary.icon--locked:before {
+    background-color: rgb(142, 148, 179);
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
+    color: white;
+    content: '⚿';
+    font-size: 14px;
+    display: inline-block;
+    border-radius: 50%;
+    padding: 3px;
+    line-height: 0.95em;
+    position: absolute;
+    left: -7px;
+    top: -1px;
+    transform: rotate(90deg);
+}
