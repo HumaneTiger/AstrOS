@@ -1,0 +1,117 @@
+#handbook {
+    background: linear-gradient(rgba(55, 59, 106, 0.98) 0%, rgba(55, 59, 106, 0.9) 50%, rgba(45, 45, 90, 0.6));
+    border-left: 1px rgba(255, 255, 255, 0.1) solid;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: 300px;
+    transition: transform 0.15s ease-out;
+}
+
+#handbook.closed {
+    transform: translateX(100%);
+}
+
+.chapter p {
+    line-height: 1.3em;
+    margin-bottom: 16px;
+}
+
+.chapter--scroll p:first-child,
+.chapter .display__visual + p {
+    filter: brightness(95%);
+    font-style: italic;
+}
+
+.link__help {
+    color: rgba(0, 0, 0, 0.6);
+    background-color: rgba(255, 255, 255, 0.75);
+    font-size: 14px;
+    display: inline-block;
+    border-radius: 8px;
+    padding: 0 3.5px;
+    line-height: 0.95em;
+    text-decoration: none;
+    font-weight: 500;
+    transition: background 0.05s ease-out;
+}
+
+.display--bright .link__help {
+    color: rgba(255, 255, 255, 0.9);
+    background-color: rgba(76, 76, 97, 0.75);
+}
+
+h3 .link__help {
+    margin-top: 3px;
+    vertical-align: top;
+}
+
+.link__help:hover {
+    background-color: rgba(255, 255, 255, 1);
+}
+.display--bright .link__help:hover {
+    background-color: rgba(76, 76, 97, 1);
+}
+
+.link__display {
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.display__visual {
+    width: 300px;
+    margin-left: -11px;
+    margin-top: -12px;
+    margin-bottom: 15px;
+    position: relative;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.25);
+}
+.display__visual:before {
+    position: absolute;
+    content: '';
+    background-image: url(../img/big-glass-panel.png);
+    background-size: 100% auto;
+    background-position: 0 0;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 300px;
+    box-shadow: 0 1px 0 inset rgba(0, 0, 0, 0.25);
+}
+.visual__inner img {
+    width: 100%;
+    height: "auto";
+    display: block;
+    padding: 1px;
+    opacity: 0.8;
+}
+
+.visual__inner h3 {
+    font-weight: normal;
+    font-size: 14px;
+    position: absolute;
+    width: 298px;
+    left: 0;
+    bottom: 0;
+    padding: 6px 10px;
+    margin: 1px;
+    background-color: rgba(23, 20, 42, 0.6);
+    text-shadow: 1px 0px 1px rgb(0, 0, 0), -1px 0px 1px rgb(0, 0, 0);
+}
+
+#handbook .chapter--closed {
+    display: none;
+}
+
+#handbook .chapter--scroll {
+    overflow-y: scroll;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(55, 59, 106, 0.9) rgba(55, 59, 106, 0.5);
+    position: absolute;
+    top: 145px;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    padding: 10px 6px;
+}

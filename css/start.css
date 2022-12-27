@@ -1,0 +1,89 @@
+main.start-screen #ship {
+    opacity: 0;
+    transform: translateY(10vh);
+    transition: opacity 1s ease-out,
+                transform 1.2s ease-out;
+}
+
+main.start-screen #logo,
+main.start-screen .display {
+    opacity: 0;
+    transform: translateY(10vh);
+    transition: opacity 1s ease-out,
+                transform 1.2s ease-out;
+}
+
+main.start-screen #start-overlay {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 1000;
+}
+
+main.start-screen #start-overlay .inner {
+    width: 25vw;
+    color: white;
+    text-shadow: 0 1px rgba(0, 0, 0, 0.5);
+    font-size: 16px;
+    line-height: 1.3em;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -60%);
+}
+main.start-screen #start-overlay .inner p.logo {
+    text-align: center;
+    padding-left: 36px;
+    margin-bottom: 1em;
+}
+main.start-screen #start-overlay .inner p.confirm {
+    margin-top: 3em;
+    text-align: center;
+}
+main:not(.start-screen) #start-overlay {
+    display: none;
+}
+
+main.start-screen a#launch-system {
+    color: white;
+}
+
+main.start-screen p.first,
+main.start-screen p.second,
+main.start-screen a#launch-system,
+main.start-screen img.logo {
+    transition: opacity 1s ease-out,
+                transform 1.2s ease-out;
+}
+
+main.start-screen.fade-out p.first {
+    transform: translateX(-15vw);
+    opacity: 0;
+}
+main.start-screen.fade-out p.second {
+    transform: translateX(15vw);
+    opacity: 0;
+}
+
+main.start-screen.fade-out a#launch-system {
+    transform: translateY(10vh);
+    opacity: 0;
+}
+
+main.start-screen.fade-out img.logo {
+    transform: translateY(-10vh);
+    opacity: 0;
+}
+
+main.start-screen.fade-displays-in #logo,
+main.start-screen.fade-displays-in .display {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+main.start-screen.fade-displays-in #ship {
+    opacity: 1;
+    transform: translate(-50%, -50%) rotate(40deg);
+}

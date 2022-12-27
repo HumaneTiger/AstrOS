@@ -1,0 +1,503 @@
+﻿<!doctype html>
+<html lang="EN">
+
+  <head>
+      <meta charset="utf-8">
+      <title>Game Title</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="icon" type="image/png" href="favicon.png">
+
+      <link rel="stylesheet" href="css/main.css">
+      <link rel="stylesheet" href="css/ui.css">
+      <link rel="stylesheet" href="css/help.css">
+
+      <link rel="stylesheet" href="css/start.css">
+      
+      <link rel="preconnect" href="https://fonts.gstatic.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap" rel="stylesheet"> 
+  </head>
+
+  <!-- 
+
+    CREDITS:
+
+
+  -->
+  <body>
+
+    <main class="start-screen">
+
+      <div id="logo">
+        <img src="img/logo.png" width="50%" height="auto">
+      </div>
+
+      <div class="display display--bright display--active" id="fonts">
+        <div class="display__header">
+          <h2 class="display__title">Font Sizes and Font Styles</h2>
+          <span class="toggle__content">▲</span>
+        </div>
+        <div class="display__body">
+          <table>
+            <tbody>
+              <tr>
+                <td>
+                  <p class="text--tiny">Tiny</p>
+                  <p class="text--small">Small</p>
+                  <p class="text--ssmedium">SS Medium</p>
+                  <p class="text--smedium">S Medium</p>
+                  <p class="text--medium">Medium</p>
+                  <p class="text--large">Large</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>Standard</p>
+                  <p class="text--uppercase">Uppercase</p>
+                  <p class="text--emphasized">Emphasized</p>
+                  <p class="align--left">Left</p>
+                  <p class="align--center">Center</p>
+                  <p class="align--right">Right</p>
+                </td>
+              </tr>              
+            </tbody>
+          </table>
+        </div>
+        <div class="display__footer--extension">
+          <p class="text--small">Optional Footer</p>
+        </div>
+      </div>
+
+      <div class="display display--bright display--active" id="buttons">
+        <div class="display__header">
+          <h2 class="display__title">Buttons</h2>
+          <span class="toggle__content">▲</span>
+        </div>
+        <div class="display__body">
+          <p class="align--center">
+            <a href="#" class="button button__primary">Primary Button</a>
+          </p>
+          <p class="align--center">
+            <a href="#" class="button button__neutral">Neutral Button</a>
+          </p>
+          <p class="align--center">
+            <a href="#" class="button button__cancel">Cancel Button</a>
+          </p>
+          <hr class="hairline spacing--medium">
+          <p class="align--center spacing--none">
+            <a href="#" class="link__primary">Primary Link</a>
+          </p>
+          <p class="align--center">
+            <a href="#fonts" class="link__display">Display Link</a>
+          </p>
+          <p class="align--center">
+            Help Link Icon <a href="#astro-space-market" class="link__help">?</a>
+          </p>
+        </div>
+      </div>
+
+      <div class="display display--bright display--active" id="structure">
+        <div class="display__header">
+          <h2 class="display__title">Lists and Tables</h2>
+          <span class="toggle__content">▲</span>
+        </div>
+        <div class="display__body">
+          <table class="table--rows">
+            <thead>
+              <tr>
+                <td class="spacing-right">Column A</td>
+                <td class="spacing-right align--right">Column B</td>
+                <td class="spacing-right align--right">Column C</td>
+                <td class="align--center">Column D</td>
+              </tr>
+            </thead>
+            <body>
+              <tr>
+                <td class="spacing-right">Cell 1</td>
+                <td class="spacing-right align--right">Cell 2</td>
+                <td class="spacing-right align--right">
+                  <p class="text--small">Cell 3</p>
+                  <small>Small Text</small>
+                </td>
+                <td class="align--center">
+                  <a href="#" class="button button__primary text--small">Button</a>
+                </td>
+              </tr>
+              <tr>
+                <td class="spacing-right">Cell 1</td>
+                <td class="spacing-right align--right">Cell 2</td>
+                <td class="spacing-right align--right">
+                  <p class="text--small">Cell 3</p>
+                  <small>Small Text</small>
+                </td>
+                <td class="align--center">
+                  <a href="#" class="button button__neutral text--small">Button</a>
+                </td>
+              </tr>
+              <tr>
+                <td class="spacing-right">Cell 1</td>
+                <td class="spacing-right align--right">Cell 2</td>
+                <td class="spacing-right align--right">
+                  <p class="text--small">Cell 3</p>
+                  <small>Small Text</small>
+                </td>
+                <td class="align--center">
+                  <a href="#" class="button button__cancel text--small">Button</a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="display display--active" id="settings">
+        <div class="display__header">
+          <h2 class="display__title">Settings</h2>
+          <span class="toggle__content">▲</span>
+        </div>
+        <div class="display__body"> 
+          <p class="text--small align--center">Fullscreen</p>
+          <p class="align--center spacing--medium">
+            <a class="button button__primary" href="#go-fullscreen">&#x26F6;</a>
+          </p>
+        </div>
+      </div>
+
+      <div class="display display--active closed" id="handbook">
+        <div class="display__header">
+          <h2 class="display__title">The Astro Miners Handbook</h2>
+          <span class="toggle__content">▶</span>
+        </div>
+        <div class="display__body">
+          <div class="chapter chapter--closed transport-earth-station">
+            <div class="display__visual">
+              <div class="visual__inner">
+                <img src="img/help/transport.png">
+                <h3>Transport <span class="flight">Earth ➤ Station</span></h3>
+              </div>
+            </div>
+            <p>
+              Although transporting cargo from Earth to space has become commonplace, the costs remain extremely high compared to e.g. interspace transports.
+              Therefore, going from Earth to orbit and beyond is only worthwhile for transporting highly specialized parts that are manufactured in a
+              <a href="#projects" class="link__display">Factory</a> on Earth.
+            </p>
+            <p>
+              For this purpose, transport rockets are launched from the Earth to stations in space at regular intervals.
+            </p>
+            <p>
+              All components already produced in the <a href="#projects" class="link__display">Factory</a> are listed in the <a href="#transport" class="link__display">Transport</a> display.
+              Their transport can be booked for the next flight at the corresponding costs.
+            </p>
+            <p>
+              Bookings can be cancelled free of charge at any time up to the start of the transport.
+            </p>
+            <p>
+              The exact time of the next transport can be seen in the <a href="#schedule" class="link__display">Schedule</a> display.
+            </p>              
+            <hr class="spacing--small">
+            <p class="text--tiny">-- Image Credit: <a href="https://www.nasa.gov/feature/nasa-begins-testing-habitation-prototypes" target="credits">NASA/Boeing</a></p>
+          </div>
+          <div class="chapter chapter--closed transport-station-earth">
+            <div class="display__visual">
+              <div class="visual__inner">
+                <img src="img/help/transport.png">
+                <h3>Transport <span class="flight">Station ➤ Earth</span></h3>
+              </div>
+            </div>
+            <p>
+              After the transports have unloaded their cargo at the stations, they begin their return flight back to Earth.
+              For this flight, a <a href="#transport-station-earth" class="link__display">Transport Station ➤ Earth</a> is available.
+            </p>
+            <p>
+              It will automatically transport samples to the <a href="#research" class="link__display">Research Laboratory</a>
+              and can also be used to sell platinum and precious metals on the
+              <a href="#earth-market" class="link__display">Precious Metals Market</a> on Earth.
+            </p>
+            <p>
+              The high upfront costs for transporting these rare metals to Earth are covered many times over by their extraordinary sales revenue.
+            </p>    
+            <hr class="spacing--small">
+            <p class="text--tiny">-- Image Credit: <a href="https://www.nasa.gov/feature/nasa-begins-testing-habitation-prototypes" target="credits">NASA/Boeing</a></p>
+          </div>
+          <div class="chapter chapter--closed transport-station-market">
+            <div class="display__visual">
+              <div class="visual__inner">
+                <img src="img/help/transport.png">
+                <h3>Transport <span class="flight">Station ➤ Astro Space Market</span></h3>
+              </div>
+            </div>
+            <p>
+              This <a href="#transport-station-market" class="link__display">Transport</a> picks up goods from your station in relatively short intervals.
+            </p>
+            <p>
+              It brings them to your <a href="#astro-market" class="link__display">Astro Space Market</a> depot.
+              The ordinary resources bought from this market do not fetch too high a price,
+              but the large quantities your mine yields still promise a good profit.
+            </p>
+            <p>
+              The exact time of the next transport  can be seen in the <a href="#schedule" class="link__display">Schedule</a> display.
+            </p>
+            <hr class="spacing--small">
+            <p class="text--tiny">-- Image Credit: <a href="https://www.nasa.gov/feature/nasa-begins-testing-habitation-prototypes" target="credits">NASA/Boeing</a></p>
+          </div>
+          <div class="chapter chapter--closed research-laboratory">
+            <div class="display__visual">
+              <div class="visual__inner">
+                <img src="img/help/laboratory.png">
+                <h3>Research Laboratory</h3>
+              </div>
+            </div>
+            <p>
+              Mining drones occasionally can find samples containing hints and traces of currently unknown elements during the mining of resources on the asteroid.
+            </p>
+            <p>
+              The <a href="#research" class="link__display">Research Laboratory</a> analyzes these samples.
+              Depending on the type of sample, the completed analysis yields a certain number of research points and unlocks newly discovered resources.
+            </p>
+            <p>
+              The operation of the <a href="#research" class="link__display">Research Laboratory</a> requires special equipment and personnel,
+              and for that reason can only be performed on Earth.
+              Therefore, samples are transported automatically and free of charge with the next <a href="#transport-station-earth" class="link__display">Transport Station ➤ Earth</a>.
+            </p>
+            <p>
+              The exact time of the next transport can be seen in the <a href="#schedule" class="link__display">Schedule</a> display.
+            </p>              
+            <hr class="spacing--small">
+            <p class="text--tiny">-- Image Credit: <a href="https://unsplash.com/photos/pwcKF7L4-no" target="credits">Unsplash</a></p>
+          </div>
+          <div class="chapter chapter--closed astro-space-market">
+            <div class="display__visual">
+              <div class="visual__inner">
+                <img src="img/help/astro-market.png">
+                <h3>Astro Space Market</h3>
+              </div>
+            </div>
+            <p>
+              This trading market is located in space and specializes in buying essential resources and industrial metals.
+              These raw materials form the basis for the in-space production of simple station components, fuel,
+              fertilizer and other vital materials.
+            </p>
+            <p>
+              To sell raw materials on the <a href="#astro-market" class="link__display">Astro Space Market</a>,
+              they must first be transported from your station to the market for a small fee on one of the regular <a href="#transport-station-market" class="link__display">Transport Station ➤ Astro Space Market</a>.
+              Once at the destination, they are then stored in your market depot, and can be sold at any time.
+            </p>
+            <p>
+              The exact time of the next transport can be seen in the <a href="#schedule" class="link__display">Schedule</a> display.
+            </p>              
+            <p>
+              However, the <a href="#astro-market" class="link__display">Astro Space Market</a> cannot compete with the prices offered for rare platinum and precious metals by the high-tech industry on Earth.
+              These metals can be sold at a much higher profit on the specialized <a href="#earth-market" class="link__display">Precious Metals Market</a> on Earth.
+            </p>
+            <hr class="spacing--small">
+            <p class="text--tiny">-- Image Credit: <a href="https://www.nasa.gov/multimedia/imagegallery/image_feature_2488.html" target="credits">NASA</a></p>
+          </div>
+          <div class="chapter chapter--closed earth-market">
+            <div class="display__visual">
+              <div class="visual__inner">
+                <img src="img/help/earth-market.png">
+                <h3>Earth Metal Market /// TOTOTOTO</h3>
+              </div>
+            </div>
+            <p>
+              This trading market is located in space and specializes in buying essential resources and industrial metals.
+              These raw materials form the basis for the in-space production of simple station components, fuel,
+              fertilizer and other vital materials.
+            </p>
+            <p>
+              To sell raw materials on the <a href="#astro-market" class="link__display">Astro Space Market</a>,
+              they must first be transported from your station to the market for a small fee on one of the regular <a href="#transport-station-market" class="link__display">Transport Station ➤ Astro Space Market</a>.
+              Once at the destination, they are then stored in your market depot, and can be sold at any time.
+            </p>
+            <p>
+              The exact time of the next transport can be seen in the <a href="#schedule" class="link__display">Schedule</a> display.
+            </p>              
+            <p>
+              However, the <a href="#astro-market" class="link__display">Astro Space Market</a> cannot compete with the prices offered for rare platinum and precious metals by the high-tech industry on Earth.
+              These metals can be sold at a much higher profit on the specialized <a href="#earth-market" class="link__display">Precious Metals Market</a> on Earth.
+            </p>
+            <hr class="spacing--small">
+            <p class="text--tiny">
+              -- Image Credit: <a href="https://unsplash.com/photos/sEpLDQ0QOVw" target="credits">Unsplash</a>
+            </p>
+          </div>
+          <div class="chapter chapter--closed factory">
+            <div class="display__visual">
+              <div class="visual__inner">
+                <img src="img/help/factory.png">
+                <h3>Factory</h3>
+              </div>
+            </div>
+            <p>
+              Factory Text
+            </p>
+            <hr class="spacing--small">
+            <p class="text--tiny">-- Image Credit: <a href="https://www.nasa.gov/mission_pages/juno/images/index.html" target="credits">NASA</a></p>
+          </div>
+          <div class="chapter chapter--closed essentials">
+            <div class="display__visual">
+              <div class="visual__inner">
+                <img src="img/help/essentials.png">
+                <h3>Volatiles and Essentiales</h3>
+              </div>
+            </div>
+            <p>
+              The asteroids that are nearest the Sun are mostly made of carbon,
+              with smaller amounts of nitrogen, hydrogen and oxygen, while the ones further away are made up of silicate rock.
+              Silicates are very common on Earth and in the Solar System.
+              They are made up of oxygen and silicon, the number one and number two most abundant elements in the Earth’s crust.
+            </p>
+            <hr class="spacing--small">
+            <p class="text--tiny">-- Image Credit: <a href="https://www.nasa.gov/mission_pages/juno/images/index.html" target="credits">NASA</a></p>
+          </div>
+          <div class="chapter chapter--closed industrial-metals">
+            <div class="display__visual">
+              <div class="visual__inner">
+                <img src="img/help/industrial-metals.png">
+                <h3>Industrial Metals</h3>
+              </div>
+            </div>
+            <p>
+              The metallic asteroids are composed of up to 80% iron and 20% a mixture of nickel and other common metals.
+            </p>
+            <hr class="spacing--small">
+            <p class="text--tiny">
+              -- Image Credit: <a href="https://unsplash.com/photos/Wt-q9EUd5Q8" target="credits">Unsplash</a>
+            </p>
+          </div>
+          <div class="chapter platinum-metals">
+            <div class="display__visual">
+              <div class="visual__inner">
+                <img src="img/help/platinum-metals.png">
+                <h3>Platinum Metals</h3>
+              </div>
+            </div>
+            <p>
+              The platinum group metals are some of the most rare and useful elements on Earth.
+              Those metals exist in such high concentrations on asteroids that a single 500-meter platinum-rich asteroid
+              can contain more platinum group metals than have ever been mined on Earth throughout human history.
+            </p>
+            <hr class="spacing--small">
+            <p class="text--tiny">-- Image Credit: <a href="https://www.nasa.gov/image-feature/36-billion-years-in-pastel-colors" target="credits">NASA/METI/AIST/Japan Space Systems, and U.S./Japan ASTER Science Team</a></p>
+          </div>
+          <div class="chapter chapter--closed tutorial-1">
+            <div class="display__visual">
+              <div class="visual__inner">
+                <img src="img/help/industrial-metals.png">
+                <h3>Tutorial</h3>
+              </div>
+            </div>
+            <div class="chapter--scroll">
+              <p>
+                Hello fellow Game Jammer – welcome to my game!
+              </p>
+              <p>
+                Let me guess your first thought... “Boah! So many stuff! What am I supposed to do here?”, right?
+              </p>
+                Well, – yes, it is a lot of stuff - grab a coffee, relax, take your time...
+                So; – first things first, let’s try to switch into Fullscreen mode with F11 on your keyboard – game is happy about every extra pixel it can get ;-)
+              </p>
+              <p>
+                Cool! Well – that’s basically it, end of tutorial – enjoy the game! Ha ha, just kidding…
+              </p>
+              <p>
+                You can move each display to a place you like, just grab the title bar and drag it. See...!
+                You can also minimize it – then it will look like <a href="#earth-market" class="link__display">this guy</a> here.
+                The icon shows up in the title bar when you hover over a display.
+              </p>
+              <p>
+                The game loop is fairly simple:
+                Your hard-working station mining drones (you can’t see them, but they are there, trust me!) are constantly and autonomously mining
+                <a href="#harvest" class="link__display">resources</a>.
+                Right now, they only detect & harvest some few essential resources. We will change that soon…
+              </p>
+              <p>
+                The mined resources can be sold at two markets – <a href="#astro-market" class="link__display">this one here</a> and <a href="#earth-market" class="link__display">that one</a> - one is buying your essential resources,
+                the other one the yummy, yummy precious metal stuff.
+                To sell your resources, you first have to transport them to your market depot.
+                Transports for <a href="#transport-station-market" class="link__display">Astro</a> and <a href="#transport-station-earth" class="link__display">Earth</a> market visit your station (have an eye on the <a href="#schedule" class="link__display">Schedule</a>),
+                and pick up all you have added with the "Add Amount" buttons in their displays – for a small fee, of cause... 
+              </p>
+              <p>
+                Once delivered at the market (the flight takes some days – we are talking about space distances here...),
+                you can sell them from your depot at any time. The essential resources are peanuts in comparison to the Platinum metals – unfortunately that’s also true for the transport costs…
+              </p>
+              <p>
+                How you unlock these resources, you ask? Say hello to the <a href="#research" class="link__display">Research Laboratory</a>!
+                Every once and a while your drones will find samples of unknown materials.
+                The <a href="#transport-station-earth" class="link__display">Transport Station ➤ Earth</a> will bring them from your Station to the Lab for free – so you can analyze them.
+                I left you a present in the Laboratory - one sample for free - go analyse it!
+                By doing so, you have a chance to unlock new resources. Mine them, sell them – you already know that… 
+              </p>
+              <p>
+                I am tired of typing – you will find out the rest by yourself. You are a smart guy – or lady, I love you all, from the deepest of my heart (don't forget to gimme a good rating… ;-) ).
+              </p>
+              <p>
+                Oh, one more thing: You can actually win the game - try to fulfill one of the <a href="#winning" class="link__display">Winning Conditions</a>!
+              </p>
+              <p>
+                Have fun and enjoy!
+              </p>
+              <p class="text--small">
+                Your Humane Tiger.
+              </p>
+              <!--
+                (open fullscreen)
+                After the transports have unloaded their cargo at the stations, they begin their return flight back to Earth.
+                <a href="#astro-market" class="link__display">Astro Space Market</a>
+                <a href="#earth-market" class="link__display">Earth Metal Market</a>-->
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--
+      <div id="start-overlay">
+        <div class="inner">
+          <p class="logo">
+            <img src="img/logo.png" class="logo" width="200" height="auto">
+          </p>
+          <p class="first">
+            In this game you play as the operator of a space mining station.
+            This station works largely autonomously, but can receive commands from you via the AstrOS operating system.
+          </p>
+          <p class="second">
+            Sell the mined raw materials on markets in space and on earth.
+            Research unknown samples found during mining operations to
+            unlock new resources and build your station into a real player in the space mining business.
+            Good luck!
+          </p>
+          <p class="confirm">
+              <a href="#" id="launch-system" class="button button__primary">Launch System</a>
+          </p>
+        </div>
+      </div>
+      -->
+    </main>
+
+    <div id="all-audio">
+      <!-- MUSIC -->
+      <audio class="music-newdawn" src="sound/music/bensound-newdawn.mp3" preload loop></audio>
+      <!-- VOICE -->
+      <audio class="voice-welcome" src="sound/voice/welcome-operator.mp3" preload></audio>
+      <audio class="voice-analyze-sample" src="sound/voice/analyze-sample.mp3" preload></audio>
+      <audio class="voice-common-sample-found" src="sound/voice/common-sample-found.mp3" preload></audio>
+      <audio class="voice-rare-sample-found" src="sound/voice/rare-sample-found.mp3" preload></audio>
+      <audio class="voice-exceptional-sample-found" src="sound/voice/exceptional-sample-found.mp3" preload></audio>
+      <audio class="voice-research-complete" src="sound/voice/research-complete.mp3" preload></audio>
+      <audio class="voice-resource-unlocked" src="sound/voice/resource-unlocked.mp3" preload></audio>
+      <audio class="voice-running-out" src="sound/voice/running-out.mp3" preload></audio>
+      <audio class="voice-compressor" src="sound/voice/compressor.mp3" preload></audio>
+      <audio class="voice-seperator" src="sound/voice/seperator.mp3" preload></audio>
+      <audio class="voice-docking" src="sound/voice/docking.mp3" preload></audio>
+      <audio class="voice-printing" src="sound/voice/printing.mp3" preload></audio>
+      <audio class="voice-construction-complete" src="sound/voice/construction-complete.mp3" preload></audio>
+      <audio class="voice-congratulations" src="sound/voice/congratulations.mp3" preload></audio>
+      <!-- SFX -->
+      <audio class="sfx-nope" src="sound/fx/nope.mp3" preload></audio>
+    </div>
+  
+    <script src="js/init.js" type="module"></script>
+    
+  </body>
+
+</html>
