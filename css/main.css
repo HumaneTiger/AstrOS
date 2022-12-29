@@ -71,6 +71,14 @@ a.link__display[href="#settings"] {
     filter: brightness(110%);
 }
 
+#pictureViewer {
+    left: 75vw;
+    top: 50vh;
+}
+#pictureViewer .display__header {
+    background-color: rgb(12, 12, 212);
+}
+
 #structure {
     left: 45vw;
     top: 10vh;

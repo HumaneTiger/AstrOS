@@ -3,6 +3,7 @@ import Ui from './ui.js'
 import Help from './help.js'
 import Audio from './audio.js'
 import Settings from './settings.js'
+import PictureViewer from './pictureViewer.js'
 
 let tick = 0;
 let ticksPerHour = 4;
@@ -55,6 +56,7 @@ function init() {
     Audio.init();
     Help.init();
     Settings.init();
+    PictureViewer.init();
 
     bind();
 
