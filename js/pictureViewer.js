@@ -1,67 +1,48 @@
 let pictureViewerContainer = document.getElementById('pictureViewer');
+let picturePath = "";
 
 export default {
   
     init() {
-        //this.hidePicture();
+        
+        // CONVENTION:
+        // the app window is showing the image located under the path given in the data-picture attribute
+        // when the value of the attribute changes, the picture gets updated
+        // having a convention like this, is providing a stable "API" for the rest of the application (the data-picture attribute)
+        // and keeps the picture viewer itself open for internal changes
+
         document.body.addEventListener('mousedown', function(e) {
 
             if (e.target.classList.contains('link__picture')) {
                 e.preventDefault();
-                let command = e.target.href.split('#')[1];
-                this.showPicture(command);
+                let picturePath = e.target.href.split('#')[1];
+                pictureViewerContainer.dataset.picture = picturePath;
             }
-            // if (e.target.classList.contains('picutreViewerId')) {
-            //     e.preventDefault();
-                
-            //     let command = e.target.href.split('#')[1];
-            //     this.showPicture(command);
-            // }
+
         }.bind(this), false);
-        //settingsContainer.addEventListener('mousedown', this.mouseDown.bind(this));
+
+        setInterval(() => {
+          if (picturePath !== pictureViewerContainer.dataset.picture) {
+            picturePath = pictureViewerContainer.dataset.picture;
+            this.showPicture(picturePath);
+          }
+        }, 100);
 
     },
 
-    // mouseDown(e) {
+    showPicture(picturePath) {
+      // 1) make sure the app window is active
+      // @Flavedo: the CSS class "display--active" controls if a display is active or not (including the toggle behavior)
 
-    //     e.preventDefault();
+      // 2) update the src attribute of the image element itself
+      // @Flavedo: https://developer.mozilla.org/en-US/docs/Web/API/Element/setAttribute
 
-    //     let target = e.target;
-    //     let command = '';
+      // 3) make sure the image is visible
+      // @Flavedo: removing the "is--hidden" class is doing the trick, see: https://developer.mozilla.org/en-US/docs/Web/API/Element/classList
+      
+      //document.getElementById("picutreViewerId").src=picturePath;
 
-    //     if (target.classList.contains('picutreViewerId')) {
-
-    //         command = target.href.split('#')[1];
-    //         this.showPicture(command);
-
-    //     }
-
-    // },
-    requestFullScreen() {
-
-        let element = document.body;
-        let docElm = document.documentElement;
-
-        // Supports most browsers and their versions.
-        let requestMethod = element.requestFullScreen || element.webkitRequestFullScreen || element.mozRequestFullScreen || element.msRequestFullScreen;
-    
-        if (docElm.requestFullscreen) {
-            docElm.requestFullscreen();
-        } else if (requestMethod) { // Native full screen.
-            requestMethod.call(element);
-        } else if (typeof window.ActiveXObject !== "undefined") { // Older IE.
-            var wscript = new ActiveXObject("WScript.Shell");
-            if (wscript !== null) {
-                wscript.SendKeys("{F11}");
-            }
-        }
-    },
-    hidePicture(){
-        document.getElementById("pictureViewer").style.display="none";
-    },
-    showPicture(command) {
-        document.getElementById("pictureViewer").style.display="";
-        document.getElementById("picutreViewerId").src=command;
+      console.log(picturePath);
 
     }
 }
